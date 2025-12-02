@@ -1,16 +1,35 @@
-import Home from "./pages/Home";
-import Register from "./pages/register";
-import { Routes, Route } from "react-router-dom";
-import Success from "./pages/success";
+// import Home from "./pages/Home";
+// import Register from "./pages/register";
+// import { Routes, Route } from "react-router-dom";
+// import Success from "./pages/success";
 
-const App = () => {
+// const App = () => {
+//   return (
+//     <Routes>
+//       <Route path="/" element={<Home />} />
+//       <Route path="/register" element={<Register />} />
+//       <Route path="/success" element={<Success />} />
+//     </Routes>
+//   );
+// };
+
+// export default App;
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Register from "./pages/register";
+import Success from "./pages/success";
+import Home from "./pages/Home";
+
+function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/success" element={<Success />} />
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/success" element={<Success />} />
+      </Routes>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;
